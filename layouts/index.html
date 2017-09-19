@@ -1,0 +1,6 @@
+{{ partial "pre-content.html" . }}
+{{ range ( .Paginate (where .Data.Pages "Type" "post")).Pages }}
+{{ .Render "summary"}}
+{{ end }}
+{{ partial "pagination.html" . }}
+{{ partial "post-content.html" . }}

@@ -1,0 +1,13 @@
+{
+    "name" : "riotemergence",
+    "license" : "GPL3",
+    "licenselink" : "https://github.com/riotemergence/riotemergence-hugo-theme/blob/master/LICENSE.md",
+    "description" : "A mimimalistic theme, pure CSS theme.",
+    "homepage" : "https://github.com/riotemergence/riotemergence-hugo-theme",
+    "tags" : ["blog", "minimalistic"],
+    "features" : "minimalistic",
+    "author" : {
+        "name" : "Tiago van den Berg",
+        "homepage" : "http://riotemergence.org"
+    }
+}

@@ -1,0 +1,9 @@
+{{ partial "pre-content.html" . }}
+<ul>
+  {{ range (.Paginate ( .Data.Pages )).Pages }}
+  <li>
+    <time>{{ with .Site.Params.dateFormat }}{{ $.Date.Format . }}{{ end }}</time> - <a href="{{ .Permalink }}">{{ .Title }}</a></li>
+  {{ end }}
+</ul>
+{{ partial "pagination.html" . }}
+{{ partial "post-content.html" . }}

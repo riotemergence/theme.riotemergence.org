@@ -1,0 +1,73 @@
+@media screen {
+    .local-menu {
+        background-color: var(--left-panel-background-color);
+        color: var(--left-panel-text-color);
+        left: var(--left-panel-left);
+        position: absolute;
+        top: var(--top-panel-height);
+        width: var(--left-panel-width);
+    }
+
+    html {
+        /* background: linear-gradient(to bottom, var(--left-panel-background-color), var(--left-panel-width), var(--left-panel-background-color), var(--left-panel-width), var(--main-background-color)); */
+        background-attachment: fixed;
+        background-color: var(--left-panel-background-color);
+    }
+
+    footer {
+        background-color: red;
+    }
+
+    .local-menu > h1 {
+        display: none;
+    }
+
+    .local-menu > ul {
+        width: 100%;
+    }
+
+    .local-menu > ul > li {
+        display: inline-block;
+        list-style-type: none;
+        width: 100%;
+    }
+    
+    .local-menu > ul > li > a {
+        color: var(--left-panel-text-color);
+        display: inline-block;
+        padding: 1em 1em 1em 2.5em;
+        text-decoration: none;
+        width: 100%;
+    }
+
+    .local-menu > ul > li > a:hover, .local-menu > ul > li > a:focus {
+        background-color: var(--left-panel-selected-background-color);
+        color: var(--left-panel-selected-text-color);
+        outline: none;
+        text-decoration: underline;
+    }
+
+    .local-menu .home, .local-menu .post, .local-menu .about, .local-menu .contact {
+        background-size: var(--font-size);
+        background-repeat: no-repeat;
+        background-position-x: calc(1em);
+        background-position-y: center;
+    }
+
+    .local-menu .home {
+        background-image: url('/img/home.svg');
+    }
+
+    .local-menu .post {
+        background-image: url('/img/podcast.svg');
+    }
+
+    .local-menu .about {
+        background-image: url('/img/user-circle.svg');
+    }
+
+    .local-menu .contact {
+        background-image: url('/img/phone.svg');
+    }
+}
+

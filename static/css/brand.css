@@ -1,0 +1,24 @@
+.brand {
+    background-color: var(--panel-background-color);
+    height: var(--top-panel-height);
+    left: var(--left-panel-left);
+    position: absolute;
+    top: var(--top-panel-top);
+    width: var(--left-panel-width);
+}
+
+.brand > .logo > img {
+    height: var(--brand-logo-height);
+    margin-left: calc( (var(--left-panel-width) - (var(--brand-logo-width) + var(--brand-font-size))) /2 );
+    margin-top: calc( (var(--top-panel-height) - (var(--brand-logo-height) + var(--brand-font-size))) /2 );
+    width: var(--brand-logo-width);
+}
+
+.brand > .title > h1 {
+    color: white;
+    font-size: var(--brand-font-size);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    text-transform: uppercase;
+}

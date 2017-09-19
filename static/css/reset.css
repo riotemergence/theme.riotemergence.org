@@ -1,0 +1,16 @@
+* {
+  border: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+  box-sizing: border-box;
+  height: auto;
+  list-style: none;
+  margin: 0;
+  max-width: 100%;
+  padding: 0;
+  text-align: left;
+}  
+
+*:before, *:after {
+  box-sizing: inherit;
+}

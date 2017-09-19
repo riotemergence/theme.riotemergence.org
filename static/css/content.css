@@ -1,0 +1,64 @@
+@media screen {
+    .content {
+		background-color: var(--main-background-color);
+		color: var(--main-text-color);
+        left: var(--left-panel-width);
+        padding: 2em 5em;
+        position: absolute;
+        right: 0;
+        top: var(--top-panel-height);
+    }
+
+    .content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
+        font-weight: bold;
+        margin: 1em 0 0.5ex 0;
+    }
+
+    .content > h1 {
+        font-size: 175%;
+        text-align: center;
+        padding-bottom: 1em;
+        border-bottom: 1px solid var(--main-text-color);
+    }
+
+    .content > h2, .content > article > h1 {
+        font-size: 150%;
+    }
+
+    .content > h3, .content > article > h2 {
+        font-size: 125%;
+    }
+
+    .content > h4, .content > article > h3 {
+        font-size: 100%;
+        font-style: italic;
+    }
+
+    .content  * {
+        margin: 0 0 1em 0;
+    }
+    
+    .content > :first-child {
+        margin-top: 0;
+    }
+
+    .content a {
+        color: var(--main-link-color);
+        text-decoration: none;
+    }
+
+    .content a:hover, .content a:focus {
+        text-decoration: underline;
+        outline: none;
+    }
+
+    .content code {
+        background: var(--main-code-background-color);
+        overflow: scroll;
+        color: var(--main-code-text-color);
+        display: block;
+        padding: 1ex;
+        width: 100%;
+    }
+}
+

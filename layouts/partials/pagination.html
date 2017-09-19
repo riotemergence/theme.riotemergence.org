@@ -1,0 +1,39 @@
+{{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
+<nav class="pagination" role="pagination">
+    <p>
+        {{ if .Paginator.HasPrev }}
+<!--
+        <a href="{{ .Paginator.First.URL }}" class="nav-first">
+            Go To First Page
+        </a>
+-->
+        <a href="{{ .Paginator.Prev.URL }}" class="nav-previous">
+            Go To Previous Page
+        </a>
+        {{ end }}
+        {{ $currentPage := .Paginator.PageNumber}}
+        {{ range .Paginator.Pagers }}
+        {{ if eq .PageNumber $currentPage }}
+        <span class="nav-page nav-current">
+            {{ .PageNumber }}
+        </span>
+        {{ else }}
+        <a href="{{ .URL }}" class="nav-page">
+            {{ .PageNumber }}
+        </a>
+        {{ end }}
+        {{ end }}
+<!-- {{ .Paginator.PageNumber }} / {{ .Paginator.TotalPages }} -->
+        {{ if .Paginator.HasNext }}
+        <a href="{{ .Paginator.Next.URL }}" class="nav-next">
+            Go To Next Page
+        </a>
+<!--
+        <a href="{{ .Paginator.Last.URL }}" class="nav-last">
+            Go To Last Page
+        </a>
+-->
+        {{ end }}
+    </p>
+</nav>
+{{ end }}

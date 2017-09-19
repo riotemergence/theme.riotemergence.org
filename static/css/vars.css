@@ -1,0 +1,48 @@
+:root {
+    --font-size: 16px;
+    --icon-size: calc( var(--font-size) * 3);
+
+    /*  Colors:  */
+    --main-background-color: #white;
+    --main-selected-background-color: #a0a0a0;
+    --main-selected-text-color: #303030;
+    --main-text-color: #909090;
+    --main-link-color: #60a0d0;
+    --main-code-background-color: #303030;
+    --main-code-text-color: #a0a0a0;
+    
+    --panel-background-color: #202020;
+    --panel-selected-background-color: #404040;
+    --panel-selected-text-color: #b0b0b0;
+    --panel-text-color: #909090;
+
+    --top-panel-background-color: var(--panel-background-color);
+    --top-panel-selected-background-color: var(--panel-selected-background-color);
+    --top-panel-selected-text-color: var(--panel-selected-text-color);
+    --top-panel-text-color: var(--panel-text-color);
+/* 
+    --left-panel-background-color: var(--panel-background-color);
+    --left-panel-selected-background-color: var(--panel-selected-background-color);
+    --left-panel-selected-text-color: var(--panel-selected-text-color);
+    --left-panel-text-color: var(--panel-text-color);
+ */
+    --left-panel-background-color: #c0c0c0;
+    --left-panel-selected-background-color: #a0a0a0;
+    --left-panel-selected-text-color: #303030;
+    --left-panel-text-color: #505050;
+
+    --main-background-color: white;
+    
+    --brand-logo-height: 48px;
+    --brand-logo-width: 73px;
+    --brand-font-size: 8px;
+    
+    --left-panel-left: 0;
+    --left-panel-width: 160px;
+ 
+    --top-panel-height: 128px;
+    --top-panel-top: 0;
+ 
+    --left-panel-top: var(--top-panel-height);
+    --top-panel-left: var(--left-panel-width);
+}

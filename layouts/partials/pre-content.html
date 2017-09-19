@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Language" content="en-us" />
+    <meta charset="utf-8" />
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
+    <link rel="shortcut icon" href="{{ "img/favicon.png" | absURL }}" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="{{ "/css/vars.css" | absURL }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ "/css/reset.css" | absURL }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ "/css/font.css" | absURL }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ "/css/accessibility.css" | absURL }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ "/css/brand.css" | absURL }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ "/css/global-menu.css" | absURL }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ "/css/local-menu.css" | absURL }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ "/css/content.css" | absURL }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ "/css/pagination.css" | absURL }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ "/css/highlight.css" | absURL }}"/>
+</head>
+<body>
+    &nbsp;
+    <nav class="contentshortcut">
+        <a href="#content">Go to content</a>
+    </nav>
+    <header class="brand" >
+        <section class="logo">
+            <img alt="Logo" src="{{ "img/logo.svg" | absURL }}" />
+        </section>
+        <section class="title">
+            <h1>{{ .Site.Title }}</h1>
+        </section>
+    </header>
+
+    <nav class="global-menu">
+        <h1>Menu</h1>
+        <ul>
+            {{ range .Site.Menus.global }}
+            <li>
+                <a href="{{ .URL }}">{{ .Name }}</a>
+            </li>
+            {{end}}
+        </ul>
+    </nav>
+    <section class="controls">
+    </section>
+
+    <!--
+    <nav class="navigation">
+        <ol>
+            <li>
+                <a href="{{ $.Site.BaseURL }}/">Home</a>
+            </li>
+            {{ range .Site.Menus.main }}
+            <li>
+                <a href="{{ .URL }}">
+						<span>{{.Name}}</span>
+					</a>
+            </li>
+            {{end}}
+        </ol>
+    </nav>
+-->
+
+    <nav class="local-menu">
+        <h1>Menu</h1>
+        <ul>
+            {{ range .Site.Menus.local }}
+            <li>
+                {{ if .Identifier }}
+                <a href="{{ .URL }}" class="{{ .Identifier }}">{{ .Name }}</a>
+                {{ else }}
+                <a href="{{ .URL }}">{{ .Name }}</a>
+                {{ end }}
+            </li>
+            {{end}}
+        </ul>
+    </nav>
+    <main id="content" class="content">
+        <h1>{{ .Title }}</h1>
+        {{ if .Description }}
+        <h2>{{ .Description }}</h2>
+        {{ end }}
+        

@@ -1,0 +1,39 @@
+@media screen {
+    .global-menu {
+        background-color: var(--top-panel-background-color);
+        color: var(--top-panel-text-color);
+        height: var(--top-panel-height);
+        left: var(--top-panel-left);
+        position: absolute;
+        right: 0;
+        top: var(--top-panel-top);
+    }
+
+    .global-menu > h1 {
+        display: none;
+    }
+
+    .global-menu > ul > li {
+        list-style-type: none;
+        display: inline;
+        font-size: 125%;
+    }
+    
+    .global-menu > ul > li > a {
+        color: var(--top-panel-text-color);
+        display: inline-block;
+        padding: 1em;
+        line-height: 1em;
+        margin: calc( (var(--top-panel-height) - 3em) / 2) 0;
+        text-decoration: none;
+    }
+
+    .global-menu > ul > li > a:hover, .global-menu > ul > li > a:focus {
+        background-color: var(--top-panel-selected-background-color);
+        color: var(--top-panel-selected-text-color);
+        outline: none;
+        text-decoration: underline;
+    }
+
+}
+
